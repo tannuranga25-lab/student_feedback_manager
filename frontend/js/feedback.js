@@ -4,7 +4,7 @@ const feedbackContainer = document.getElementById("feedbackContainer")
 
 async function loadFeedback(){
     try {
-        const response = await fetch("http://localhost:7000/api/feedback");
+        const response = await fetch("https://student-feedback-manager-3-1n55.onrender.com/api/feedback");
 
         if(!response.ok){
             throw new Error("failed to load feedback");

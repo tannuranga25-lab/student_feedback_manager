@@ -74,7 +74,7 @@ feedbackForm.addEventListener("submit", async (event) => {
     try {
 
         const response = await fetch(
-            "https://student-feedback-manager-3-1n55.onrender.com",
+            "https://student-feedback-manager-3-1n55.onrender.com/api/feedback",
             {
                 method: "POST",
 
