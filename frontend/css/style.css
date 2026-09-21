@@ -1,0 +1,701 @@
+/* ================================
+   1. RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   2. BODY
+================================ */
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f7f5ff;
+    color: #17152b;
+}
+
+
+/* ================================
+   3. NAVBAR
+================================ */
+
+.navbar {
+    width: min(90%, 1200px);
+    margin: 24px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+    color: #17152b;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6f6b85;
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #7c5cff;
+}
+
+
+/* ================================
+   4. MAIN CONTAINER
+================================ */
+
+main {
+    width: min(94%, 1200px);
+    margin: 40px auto;
+}
+
+
+/* ================================
+   5. MAIN TWO-COLUMN LAYOUT
+================================ */
+
+.feedback-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+
+/* ================================
+   6. LEFT FEEDBACK FORM CARD
+================================ */
+
+.feedback-form {
+    padding: 52px;
+    background: white;
+    border-radius: 28px;
+}
+
+
+/* Small label above heading */
+
+.eyebrow {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 50px;
+
+    background: #f0ebff;
+    color: #6948e8;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+
+    margin-bottom: 22px;
+}
+
+
+/* ================================
+   7. HEADING
+================================ */
+
+.feedback-form h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+
+    margin-bottom: 16px;
+}
+
+
+/* Intro paragraph */
+
+.feedback-form > h1 + p {
+    color: #6f6b85;
+    font-size: 17px;
+    line-height: 1.6;
+
+    margin-bottom: 40px;
+}
+
+
+/* ================================
+   8. FORM
+================================ */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Labels */
+
+form label {
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   9. INPUT + TEXTAREA
+================================ */
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid #ddd9ec;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-family: inherit;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Name input spacing */
+
+form input {
+    margin-bottom: 28px;
+}
+
+
+/* Feedback textarea */
+
+form textarea {
+    min-height: 140px;
+
+    resize: vertical;
+
+    margin-top: 8px;
+    margin-bottom: 28px;
+}
+
+
+/* Input focus */
+
+form input:focus,
+form textarea:focus {
+    border-color: #7c5cff;
+
+    box-shadow:
+        0 0 0 3px rgba(124, 92, 255, 0.12);
+}
+
+
+/* ================================
+   10. RATING
+================================ */
+
+.rating-title {
+    margin-bottom: 8px;
+}
+
+
+/* Stars container */
+
+#rating {
+    display: flex;
+    gap: 8px;
+
+    margin-bottom: 28px;
+}
+
+
+/* Individual star */
+
+#rating button {
+    border: none;
+    background: transparent;
+
+    font-size: 42px;
+    line-height: 1;
+
+    color: #d8d3e8;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Star hover */
+
+#rating button:hover {
+    color: #7c5cff;
+
+    transform: scale(1.12);
+}
+
+
+/* Selected stars */
+
+#rating button.selected {
+    color: #7c5cff;
+}
+
+
+/* ================================
+   11. SUBMIT BUTTON
+================================ */
+
+form > button[type="submit"] {
+    border: none;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    background: #7c5cff;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* Submit hover */
+
+form > button[type="submit"]:hover {
+    background: #6848e8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   12. RIGHT INFORMATION SECTION
+================================ */
+
+.feedback-info {
+    padding: 52px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1edff,
+            #fff4fb
+        );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* ================================
+   13. RIGHT SIDE BIG MESSAGE
+================================ */
+
+.visual-message {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 52px;
+    line-height: 1.05;
+    font-weight: 700;
+
+    color: #6948e8;
+
+    margin-bottom: 24px;
+}
+
+
+/* Right side description */
+
+.info-description {
+    max-width: 450px;
+
+    color: #6f6b85;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    margin-bottom: 32px;
+}
+
+
+/* ================================
+   14. BENEFIT CARDS
+================================ */
+
+.benefits {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+
+/* Individual benefit */
+
+.benefit-card {
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 18px;
+}
+
+
+/* Benefit icon */
+
+.benefit-card > span {
+    font-size: 25px;
+
+    color: #7c5cff;
+}
+
+
+/* Benefit heading */
+
+.benefit-card h3 {
+    margin-top: 14px;
+    margin-bottom: 8px;
+
+    font-size: 16px;
+}
+
+
+/* Benefit description */
+
+.benefit-card p {
+    color: #77718d;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   15. TABLET / SMALL DESKTOP
+================================ */
+
+@media (max-width: 800px) {
+
+    /* Two columns → one column */
+
+    .feedback-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Reduce card padding */
+
+    .feedback-form,
+    .feedback-info {
+        padding: 32px 24px;
+    }
+
+
+    /* Smaller right-side heading */
+
+    .visual-message {
+        font-size: 40px;
+    }
+
+
+    /* Benefit cards become vertical */
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================================
+   16. MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    /* Navbar */
+
+    .navbar {
+        width: 92%;
+
+        margin-top: 18px;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    nav {
+        gap: 16px;
+    }
+
+
+    .logo {
+        font-size: 21px;
+    }
+
+
+    /* Main */
+
+    main {
+        width: 92%;
+
+        margin: 30px auto;
+    }
+
+
+    /* Form card */
+
+    .feedback-form {
+        padding: 28px 22px;
+
+        border-radius: 18px;
+    }
+
+
+    /* Heading */
+
+    .feedback-form h1 {
+        font-size: 34px;
+    }
+
+
+    /* Description */
+
+    .feedback-form > h1 + p {
+        font-size: 15px;
+
+        margin-bottom: 30px;
+    }
+
+
+    /* Stars */
+
+    #rating button {
+        font-size: 36px;
+    }
+
+
+    /* Right section */
+
+    .feedback-info {
+        padding: 28px 22px;
+
+        border-radius: 18px;
+    }
+
+
+    .visual-message {
+        font-size: 34px;
+    }
+}
+
+
+
+/* ================================
+   FEEDBACK WALL
+================================ */
+
+.feedback-wall {
+    padding: 40px 0;
+}
+
+.wall-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.wall-header h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.wall-header p {
+    color: #6f6b85;
+    font-size: 17px;
+}
+
+
+/* Feedback cards container */
+
+.feedback-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* Individual card */
+
+.feedback-card {
+    padding: 26px;
+
+    background: white;
+
+    border: 1px solid #eeeaf8;
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Card hover */
+
+.feedback-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(80, 60, 150, 0.08);
+}
+
+
+/* Card header */
+
+.feedback-card-header {
+    margin-bottom: 18px;
+}
+
+.feedback-card-header h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+
+/* Rating */
+
+.feedback-rating {
+    color: #7c5cff;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+
+/* Message */
+
+.feedback-message {
+    color: #6f6b85;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* Loading */
+
+.loading {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    color: #6f6b85;
+}
+
+
+/* Error */
+
+.error-message {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    color: #c0392b;
+}
+
+
+@media (max-width: 800px) {
+
+    .feedback-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-form,
+    .feedback-info {
+        padding: 32px 24px;
+    }
+
+    .visual-message {
+        font-size: 40px;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media (max-width: 600px) {
+
+    .feedback-container {
+        grid-template-columns: 1fr;
+    }
+
+    .wall-header h1 {
+        font-size: 34px;
+    }
+
+    .wall-header p {
+        font-size: 15px;
+    }
+}
+
+
+.nav-cta {
+    padding: 10px 16px;
+    border-radius: 10px;
+
+    background: #7c5cff;
+    color: white !important;
+}
+
+.nav-cta:hover {
+    background: #6848e8;
+}
